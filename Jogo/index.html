@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+
+    
+
+    <title>3 Cogumelos</title>
+</head>
+<body>
+    <h1>Capítulo 1</h1>
+    <h2>Os 3 Cogumelos</h2>
+    <p>Tu entras num beco escuro e silencioso. De repente vez um homem com 3 Cogumelos.</p>
+        <p>Ele dá-te a opção de escolheres um dos 3 Cogumelos.</p>
+        <img src="img/pexels-photo-333850.jpeg">
+        <button class="button1" id="Pinkfungus" onClick="op_A(this.id)">Pinkfungus</button>
+        <button class="button2" id="Wormus" onClick="op_A(this.id)">Wormus</button>
+        <button class="button3" id="Gandaias" onClick="op_A(this.id)">Gandaias</button>
+    </div>
+        <h2></h2>
+        <a href="Pinkfungus.html"><p id="PinkfungusTXT" class="op op_Pinkfungus"><button>Pinkfungus Teletransportado para um mundo com ceu rosa com animais marinhos voadores</p></button></a>
+        <a href="Wormus.html"><p id="WormusTXT" class="op op_Wormus"><button>Wormus Teletransportado para um mundo com moluscolus gigantes e caracois inteligentes</p></button></a>
+        <a href="Gandaia.html"><p id="GandaiasTXT" class="op op_Gandaias"><button>Gandaia</p></button></a> 
+
+
+        <script>             
+            function op_A(opcao){
+               if(opcao == "Pinkfungus"){
+                   var texto = document.querySelector("#PinkfungusTXT");
+                    document.getElementById("Wormus").disabled = true;
+                    document.getElementById("Gandaias").disabled = true;
+                   texto.classList.remove("op");
+               }else if(opcao == "Wormus"){
+                   var texto = document.querySelector("#WormusTXT");
+                   document.getElementById("Pinkfungus").disabled = true;
+                    document.getElementById("Gandaias").disabled = true;
+                   texto.classList.remove("op");
+
+               }else{
+                   var texto = document.querySelector("#GandaiasTXT");
+                   document.getElementById("Pinkfungus").disabled = true;
+                    document.getElementById("Wormus").disabled = true;
+                   texto.classList.remove("op");
+               }
+            }
+        </script>
+</body>
+</html>

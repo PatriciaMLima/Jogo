@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+      body{
+        background-color: rgb(44, 218, 96);
+      }
+            h1{
+              color:white;
+        text-align: center;
+    }
+    
+    h2{
+      color:white;
+        text-align: center;
+    }
+
+    .op{
+  display: none;
+}
+    
+    p{
+      color:white;
+      text-align: center
+    }
+    
+    img{
+    display: block;
+      padding:5px 290px;
+      width: 45%;
+    }
+
+    .button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(53, 231, 53);
+}
+
+.button1:hover {
+  background-color: rgb(52, 203, 230);
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.button2:hover {
+  background-color: rgb(0, 7, 0);
+  color: white;
+}
+        </style>
+
+    <title>Wormus</title>
+</head>
+<body>
+    <h1>Capítulo 3</h1>
+    <h2>Wormus</h2>
+    <p>Um mundo com moluscolus gigantes e caracois inteligentes</p>
+    <img src="img/snail.jpg">
+
+        <button class="button1" id="Falar" onClick="op_C(this.id)">Chamar os Caracois</button>
+        <button class="button2" id="Guerra" onClick="op_C(this.id)">Ter com as Minhocas</button>
+
+        <h2></h2>
+        <p id="Falarwor" class="op op_Falar">Os caracois socorrem-te. Diagnosticam-te com cancro e curam-te</p>
+        <p id="Guerrawor" class="op op_Guerra">Ficam tropa, criam um exercito de Minhocas para entrar em guerra com os Caracois.<br> Perdes a guerra e ficas preso na prisão mais segura do reino dos caracois</p>
+        <script>
+            function op_C(opcao){
+               if(opcao == "Falar"){
+                   var texto = document.querySelector("#Falarwor");
+                    document.getElementById("Guerra").disabled = true;
+                   texto.classList.remove("op");
+               }else if(opcao == "Guerra"){
+                   var texto = document.querySelector("#Guerrawor");
+                   document.getElementById("Falar").disabled = true;
+                   texto.classList.remove("op");
+            }
+          }
+            
+            
+        </script>
+
+<a href="index.html"><button><p>Inicio</p></button></a>
+    
+</body>
+</html>

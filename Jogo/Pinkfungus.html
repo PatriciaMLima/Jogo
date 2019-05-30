@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+      body{
+        background-color: pink;
+      }
+
+        h1{
+          color:white;
+    text-align: center;}
+h2{
+  color:white;
+    text-align: center;
+}
+
+.op{
+  display: none;
+}
+
+p{
+  color:white;
+  text-align: center
+}
+
+img{
+  padding:0px 350px;
+display: block;
+  width: 50%;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(230, 52, 185);
+}
+
+.button1:hover {
+  background-color: rgb(230, 52, 185);
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(119, 6, 6);
+}
+
+.button2:hover {
+  background-color: rgb(119, 6, 21);
+  color: white;
+}
+    </style>
+
+    <title>Pinkfungus</title>
+</head>
+<body>
+    <h1>Capítulo 2</h1>
+    <h2>Pinkfungus</h2>
+    <p>Um mundo com ceu rosa com animais marinhos voadores</p>
+        
+    <img src="img/whale.jpg">
+        <button class="button1" id="Ficar" onClick="op_B(this.id)">Ter com uma Baleia</button>
+        <button class="button2" id="Comer" onClick="op_B(this.id)">Caçar carne de Baleia voadora</button>
+
+        <h2></h2>
+        <p id="Ficarpink" class="op op_Ficar">Ficam tropas para o resto da vida</p>
+        <p id="Comerpink" class="op op_Comer">Ficar com diabetes pois a carne neste mundo tem uma taxa extremamente elevada de açucar</p>
+        <script>
+            function op_B(opcao){
+               if(opcao == "Ficar"){
+                   var texto = document.querySelector("#Ficarpink");
+                    document.getElementById("Comer").disabled = true;
+                   texto.classList.remove("op");
+               }else if(opcao == "Comer"){
+                   var texto = document.querySelector("#Comerpink");
+                   document.getElementById("Ficar").disabled = true;
+                   texto.classList.remove("op");
+            }
+          }
+        </script>
+         <a href="index.html"><button><p>Inicio</p></button></a>
+    
+</body>
+</html>
